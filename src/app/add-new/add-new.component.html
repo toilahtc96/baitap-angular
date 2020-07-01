@@ -1,0 +1,19 @@
+<form (ngSubmit)="onSubmit(formAdd.value);" #formAdd="ngForm">
+    <label for="">Tên nhân viên: </label>
+    <input type="text" placeholder="employee_name" name="employee_name" ngModel #employee_name="ngModel" required>
+    <p *ngIf="employee_name.invalid && employee_name.touched  ">Phải nhập tên</p>
+    <br/>
+    <label for="">Lương nhân viên: </label>
+    <input type="number" placeholder="employee_salary" name="employee_salary" ngModel #employee_salary="ngModel" required>
+    <p *ngIf="employee_salary.invalid && employee_salary.touched  ">Phải nhập lương</p>
+    <p *ngIf="employee_salary.value < 0  ">Lương phải lớn hơn 0</p>
+
+    <br/>
+    <label for="">Tuổi nhân viên: </label>
+    <input type="number" placeholder="employee_age" name="employee_age" ngModel #employee_age="ngModel" required>
+    <p *ngIf="employee_age.invalid && employee_age.touched  ">Phải nhập tuổi</p>
+    <p *ngIf="employee_age.value < 18 && employee_age.touched  ">Tuổi phải lớn hơn 18</p>
+    <br/>
+
+    <button [disabled]="formAdd.invalid">Submit</button>
+</form>

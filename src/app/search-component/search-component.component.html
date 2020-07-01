@@ -1,0 +1,34 @@
+<table class="search-table">
+    <tr>
+        <td class="td-table">
+            <label for="username">Nhap ten: </label>
+            <input placeholder="username" [(ngModel)]="username" required>
+            <span *ngIf="" [ngStyle]="{color: 'red'}"> Cần nhập tên </span>
+        </td>
+        <td class="td-table">
+            <label for="username">Ngay bat dau: </label>
+            <input type="date" [(ngModel)]="startDate" required>
+            <span *ngIf="" [ngStyle]="{color: 'red'}"> Cần nhập ngày bắt đầu
+            </span>
+        </td>
+        <td class="td-table">
+            <label for="username">Ngay ket thuc: </label>
+            <input type="date" [(ngModel)]="endDate" required>
+            <span *ngIf=""> Cần nhập ngày kết thúc
+            </span>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <div style="text-align: center;">
+                <button class="btn-search" [disabled]="checkForm()" (click)="search();">Tim kiem</button>
+                <button class="btn-add"><a [routerLink]="['/addNew']">Thêm mới</a></button>
+            </div>
+        </td>
+        <td></td>
+    </tr>
+</table>
+
+
+<app-table-data></app-table-data>

@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+.td-table{
+    margin: 10px;
+    padding: 10px;
+}
+
+.search-table{
+    text-align: center;
+}
+.btn-search, .btn-add {
+    
+    margin: 10px;
+}
+

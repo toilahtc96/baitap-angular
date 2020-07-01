@@ -1,0 +1,18 @@
+<table style="width:70%;">
+    <thead>
+        <th>id</th>
+        <th>Tên</th>
+        <th>Tuổi</th>
+        <th>Lương</th>
+        <th>Thaotác</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let person of arrPerson">
+            <td> {{person.id}}</td>
+            <td> {{person.employee_name}}</td>
+            <td style="text-align: right;"> {{person.employee_age}}</td>
+            <td style="text-align: right;">{{person.employee_salary | moneyFormatPipe}}</td>
+            <td> <button>Sửa</button></td>
+        </tr>
+    </tbody>
+</table>
